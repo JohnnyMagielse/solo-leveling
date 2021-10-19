@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Niramit:wght@400;700&display=swap");
+body {
+  font-family: "Niramit", sans-serif;
+  color: #fff;
+}
+
+#sung-jin .bg-blue {
+  background-color: #27408B;
+}
+#sung-jin h3#rank {
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 3rem;
+}
+#sung-jin h3#rank::first-letter {
+  font-size: 4rem;
+  color: #df9712;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  font-family: "Nanum Brush Script", cursive;
+}
+#sung-jin h6 {
+  font-size: 1.1rem;
+}
+#sung-jin h1 {
+  font-size: 2.8rem;
+}
+#sung-jin p {
+  font-size: 1.1rem;
+}
+#sung-jin li {
+  font-size: 1.4rem;
+  padding-bottom: 5px;
+  opacity: 0.8;
+}
+#sung-jin li:hover {
+  font-weight: bold;
+  opacity: 1;
+}
+#sung-jin li:hover a {
+  cursor: pointer;
+}
+#sung-jin .active {
+  font-weight: bold;
+  list-style-type: disc;
+  list-style-position: inside;
+  opacity: 1;
+}
+
+#header #header-img {
+  height: 100vh;
+  background-image: url(../img/header.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#header .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000cb;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#header .nav-width {
+  width: 300px;
+}
+#header .sidenav a {
+  padding: 8px 8px 8px 45px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+#header .sidenav a:hover {
+  color: #f1f1f1;
+}
+#header input[type=checkbox]:checked ~ #sidebarMenu {
+  transform: translateX(0);
+}
+#header input[type=checkbox] {
+  transition: all 0.6s;
+  box-sizing: border-box;
+  display: none;
+}
+#header .sidebarIconToggle {
+  transition: all 0.6s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 30px;
+  left: 30px;
+  height: 22px;
+  width: 30px;
+}
+#header .spinner {
+  transition: all 0.6s;
+  box-sizing: border-box;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+#header .horizontal {
+  transition: all 0.6s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 5px;
+}
+#header .diagonal.part-1 {
+  position: relative;
+  transition: all 0.6s;
+  box-sizing: border-box;
+  float: left;
+}
+#header .diagonal.part-2 {
+  transition: all 0.6s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 5px;
+}
+#header input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+  transition: all 0.6s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+#header input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+  transition: all 0.6s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+#header input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+  transition: all 0.6s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -12px;
+}
+#header .vh-85 {
+  height: 85vh;
+}
+#header #mouse {
+  animation: mouse-animate 5s infinite;
+}
+@keyframes mouse-animate {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(35%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(35%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@media screen and (max-height: 450px) {
+  #header .sidenav {
+    padding-top: 15px;
+  }
+  #header .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
